@@ -1,0 +1,26 @@
+.recommended-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rem;
+}
+.recommended {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.recommended-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: rgb(137, 137, 134);
+}
+
+.btns{
+  padding: 10px 20px;
+  border:none;
+  cursor: pointer;
+  margin-right: 6px;
+  border:0.6px solid #ccc;
+  border-radius: 5px;
+  color:#323232
+}

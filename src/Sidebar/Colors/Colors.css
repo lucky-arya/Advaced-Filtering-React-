@@ -1,0 +1,95 @@
+/* Colors sidebar styles - colored radio controls */
+.colors-container{
+	margin-bottom: 1rem;
+}
+
+.colors-title{
+	font-size: 1.5rem;
+	font-weight: normal;
+	margin-bottom: 0.75rem;
+	color: rgb(137,137,134);
+}
+
+.colors-items{
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.color-label-container{
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	position: relative;
+	padding: 0.25rem 0.25rem;
+	cursor: pointer;
+}
+
+.color-label-container input{
+	position: absolute;
+	opacity: 0;
+	width: 1rem;
+	height: 1rem;
+	left: 0.25rem;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0;
+}
+
+.color-label{
+	font-size: 1rem;
+	color: #323232;
+}
+
+.checkmark{
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	border: 2px solid #cfcfcf;
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	transition: border-color 120ms ease, background-color 120ms ease;
+	margin-left: 0.25rem;
+}
+
+/* inner dot */
+.checkmark::after{
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	transition: transform 120ms ease;
+}
+
+/* color variants - set the fill color for the inner dot when checked */
+.checkmark.neutral{ border-color: #cfcfcf; }
+.checkmark.black{ border-color: #333; }
+.checkmark.blue{ border-color: #1e90ff; }
+.checkmark.red{ border-color: #ff4d4f; }
+.checkmark.green{ border-color: #28a745; }
+.checkmark.white{ border-color: #ddd; background-color: transparent; }
+
+/* the inner-dot colors (applied when checked) */
+.color-label-container input:checked + .checkmark.neutral::after{ background-color: #666; }
+.color-label-container input:checked + .checkmark.black::after{ background-color: #000; }
+.color-label-container input:checked + .checkmark.blue::after{ background-color: #1e90ff; }
+.color-label-container input:checked + .checkmark.red::after{ background-color: #ff4d4f; }
+.color-label-container input:checked + .checkmark.green::after{ background-color: #28a745; }
+.color-label-container input:checked + .checkmark.white::after{
+	background-color: #fff;
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.12) inset; /* make white visible */
+}
+
+/* show inner dot when checked */
+.color-label-container input:checked + .checkmark::after{
+	transform: translate(-50%, -50%) scale(1);
+}
+
+/* hover & focus */
+.color-label-container:hover .checkmark{ border-color: #999; }
+.color-label-container input:focus + .checkmark{ box-shadow: 0 0 0 4px rgba(0,0,0,0.06); }

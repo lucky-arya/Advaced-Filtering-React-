@@ -1,0 +1,95 @@
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 2.5rem;
+    margin-left: 21rem;
+    margin-top: 2.5rem;
+    padding-bottom: 2rem;
+    z-index: 1;
+}
+
+.card {
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    border: none;
+    padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.18s, transform 0.18s;
+    cursor: pointer;
+    position: relative;
+}
+.card:hover {
+    box-shadow: 0 8px 32px rgba(245,197,24,0.13);
+    transform: translateY(-4px) scale(1.025);
+}
+
+.card-image {
+    width: 10rem;
+    height: 10rem;
+    /* object-fit: contain; */
+    margin-bottom: 1.25rem;
+    border-radius: 0.75rem;
+    background: #f7f6f6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #222;
+    text-align: center;
+}
+
+.card-reviews {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+.rating-stars {
+    color: #f5c518;
+    font-size: 1.1rem;
+}
+.total-reviews {
+    margin-left: 0.5rem;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.card-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+.price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+}
+.price del {
+    color: #bbb;
+    margin-right: 0.5rem;
+}
+.bag {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    color: #f5c518;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f6f6;
+    border-radius: 50%;
+    transition: background 0.18s;
+}
+.bag:hover {
+    background: #f5c51822;
+}
